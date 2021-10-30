@@ -81,28 +81,3 @@ function div(x,y) {
 function remDiv(x,y) {
     return x % y;   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
