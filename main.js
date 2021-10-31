@@ -1,8 +1,8 @@
 // Переменные---------------------------------------
 
-let x = +prompt('Введите число');
+let x = prompt('Введите число');
 let a = prompt('Введите опирацию');
-let y = +prompt('Введите число');
+let y = prompt('Введите число');
 
 // Функция для проверки вычесляемых значений-------
 
@@ -59,7 +59,7 @@ function pow(x,y) {
 
 // Сумма
 function sum(x,y) {
-    return x + y;   
+    return +x + +y;   
 }
 
 // Вычитание
@@ -74,7 +74,7 @@ function multi(x,y) {
 
 // Деление
 function div(x,y) {
-    return x / y;   
+    return x / y;
 }
 
 // Остаток от деления
