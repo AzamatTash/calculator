@@ -1,9 +1,8 @@
 function calc(a,x,y) {
 
     const isNotNumber = typeof x !== 'number' || typeof y !== 'number'; 
-    const isNotValid = x == undefined || !y ;
-
-    if (isNotNumber || isNotValid) {
+   
+    if (isNotNumber) {
         return 'Error';
     }       
     
@@ -21,6 +20,11 @@ function calc(a,x,y) {
             return x * y;
             break;
         case 'div':
+            switch (y) {
+                case 0:
+                    return 'Error';
+                    break;
+            }
             return x / y;
             break;
         case 'remDiv':
@@ -33,4 +37,4 @@ function calc(a,x,y) {
     
 }
 
-console.log(calc('iv',10,10));
+console.log(calc('div',10,0));
