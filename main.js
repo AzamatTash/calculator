@@ -9,15 +9,24 @@ function calc(a,x,y) {
         pow: x ** y,
         remDiv: x % y,
     }
+    
+    try {
+        if (isNotNumber) {
+            throw new ReferenceError('Вы ввели не число!'); 
+        } 
+    } catch (e) {
+        console.log(e.message);   
+    }
 
-    if (isNotNumber) {
-        return 'Error';
-    } else if (a in operations) {
-        return operations[a];
-    } else {
-        return 'unknown operation';
+    try {
+        if (a in operations) {
+            return operations[a];
+        } else {
+            throw new Error('Не известная операция!')       
+        }    
+    } catch (e) {
+        console.log(e.message);
     }
 } 
 
-
-console.log(calc('div',10,0));
+console.log(calc('div',10,2));
